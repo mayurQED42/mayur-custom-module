@@ -1,0 +1,35 @@
+<?php
+//write hook for send mails
+
+function sendemail_install()
+{
+    //gets module name and send email to configure email address
+    $configs=$this->getConfiguration();
+    $emailto = $configs['email'];
+
+    //sends mail
+    $my_module = 'module name';
+    $my_mail_token = microtime();
+    \Drupal::logger('my_module')->notice('mail is sent');
+    $message = array(
+        'id' => $my_module,
+        'from' => $from,
+        'to' => $emailto,
+        'subject' => 'new module gets installed',
+        'body' => $my_module.' is installed',
+        'headers' => array(
+          'From' => $from, 
+          'Sender' => $from, 
+          'Return-Path' => $from,
+        ),
+    );
+
+    $system = drupal_mail_system($my_module, $my_mail_token);
+    if ($system->mail($message)) {
+        \Drupal::logger('my_module')->notice('mail is sent');
+    }
+    else {
+        \Drupal::logger('my_module')->notice('mail is not sent');
+    }
+
+}

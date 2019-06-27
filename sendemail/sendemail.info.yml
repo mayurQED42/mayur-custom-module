@@ -1,0 +1,5 @@
+name: sendemail
+type: module
+description: sends email to comfigure email address when module enabled.
+package: custom
+core: 8.x
