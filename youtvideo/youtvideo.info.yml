@@ -1,0 +1,5 @@
+name: youtvideo
+type: module
+description: created for youtube link field and getting youtube video.
+package: custom
+core: 8.x
