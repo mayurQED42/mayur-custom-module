@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK()
+ */
+function clock_preprocess_block(&$variables) {
+  if ($variables['plugin_id'] == 'clock_block') {
+    $variables['page']['#attached']['library'][] = 'clock/cssstyle';
+  }
+}

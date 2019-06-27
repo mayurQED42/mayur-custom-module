@@ -1,0 +1,5 @@
+name: clock
+type: module
+description: created for showing clock.
+package: custom
+core: 8.x
