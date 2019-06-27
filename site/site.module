@@ -1,0 +1,20 @@
+<?php
+
+function site_form_system_site_information_settings_alter(&$form, &$form_state)	{
+    //added field for API key
+    $form['api_key'] = array(
+		'#type' => 'textfield',
+		'#title' => t('API KEY'),
+		'#description' => t('Enter API KEY'),
+    );
+    //Change button text from "save configuration" to "submit"  
+    $form['actions']['submit']['#value'] = t('submit');
+}
+
+function site_contentasjson_get_node($node) {
+  $node_array = array();
+  $node_array['id'] = $node->nid;
+  $node_array['title'] = $node->title;
+  
+  return $node_array;
+}

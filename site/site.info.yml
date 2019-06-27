@@ -1,0 +1,5 @@
+name: site
+type: module
+description: created for site settings data alter.
+package: custom
+core: 8.x
