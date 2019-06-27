@@ -1,0 +1,39 @@
+/* css for city and description */
+.myblocks{
+    width:100%;
+    color: white;
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size : cover;
+  }
+  
+  .myblocks .city{
+    width:50%;
+  }
+  
+  .myblocks .desc{
+    width:50%;
+  }
+  
+  /* css for weather data */
+  .blockwrapper{
+    width:100%;
+    background-color: pink;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .blockwrapper .blockchild{
+    width:20%;
+    align-self: stretch;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+
+  

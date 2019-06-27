@@ -1,0 +1,13 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function weather_theme() {
+  return array(
+   'weather_block' => array(
+            'variables' => array('temp_min' => NULL, 'temp_max' => NULL, 'pressure' => NULL, 'humidity' => NULL, 'wind' => NULL, 'city' => NULL, 'description' => NULL, 'image'=> NULL),
+            'template' => 'customblock',
+            //'path' => drupal_get_path('module','weather'),
+        ),
+  );
+}

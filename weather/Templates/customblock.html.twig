@@ -1,0 +1,55 @@
+{# css library which this twig file refers #}
+
+{{attach_library('weather/mycssstyle')}}
+
+{#
+/**
+ * @file
+ * custom block.
+ * Available variables:
+ * - city: provide city name.
+ * - description: provide decription of city.
+ * - temp_min: provide minimum temperature of city.
+ * - temp_max: provide maximum temperature of city.
+ * - pressure: provide pressure of city.
+ * - humidity: provide humidity of city.
+ * - wind: provide wind of city.
+ */
+#}
+
+{# city and discription #}
+{{ kint(image) }}hello
+<div class="myblocks" style="background-image: url('{{ file_url(image) }}');">
+    <div class="city">
+        <img src="modules/custom/weather/images/sun.png" height="100px" width="100px">
+        <h1>{{ city }}</h1>
+    </div>
+    <div class="desc">
+        <h1>{{ description }}</h1>
+    </div>
+</div>
+
+{# wheather data #}
+
+<div class="blockwrapper">
+    <div class="blockchild temp-min">
+            <h5>min<h5>
+             <h1> {{ temp_min }}</h1>
+    </div>
+    <div class="blockchild temp-max">
+            <h5>max<h5>
+             <h1> {{ temp_max }}</h1>
+    </div>
+    <div class="blockchild pressure">
+            <h5>pressure<h5>
+             <h1> {{ pressure }}</h1>
+    </div>
+    <div class="blockchild humidity">
+            <h5>humidity<h5>
+             <h1> {{ humidity }}</h1>
+    </div>
+    <div class="blockchild wind">
+           <h5>wind<h5>
+            <h1> {{ wind }}</h1>
+    </div>
+</div>

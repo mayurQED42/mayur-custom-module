@@ -1,0 +1,8 @@
+mwheather.configform:
+  path: /weather
+  defaults:
+    _title: 'config form'
+    _form: '\Drupal\weather\Form\MyWeather'
+  requirements:
+    _permission: 'administer site configuration'  
+

@@ -1,0 +1,4 @@
+mycssstyle:
+  css:
+    theme:
+      css/myheader.css: {}
