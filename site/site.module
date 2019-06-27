@@ -11,6 +11,7 @@ function site_form_system_site_information_settings_alter(&$form, &$form_state)	
     $form['actions']['submit']['#value'] = t('submit');
 }
 
+//for node object to json
 function site_contentasjson_get_node($node) {
   $node_array = array();
   $node_array['id'] = $node->nid;
